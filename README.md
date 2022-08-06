@@ -16,19 +16,19 @@ Aplicativo para consultar os campeões de cada copa do mundo
 //MARK: - UITableViewDelegate , UITableViewDataSource
 extension WorldCupViewController:UITableViewDataSource {
 	
-	//numeros de secoes
+	//números de seções
 	func numberOfSections(in tableView: UITableView) -> Int {
 		return  worldCup?.matches.count ?? 1
 	}
 	
-	//numberos de linhas dentro da secao
+	//números de linhas na seção
 	//section
 	func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
 		let numberRows = worldCup?.matches[section].games
 		return numberRows?.count ?? 1
 	}
 	
-  //titulo na secao
+        //titulo na secao
 	func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
 		if let stage = worldCup?.matches[section].stage {
 			return stage
@@ -37,7 +37,7 @@ extension WorldCupViewController:UITableViewDataSource {
 	}
 	
 	
-	//criando as celulas
+	//criando as células
 	func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
 		let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! GamesTableViewCell
 		//pego os Match
