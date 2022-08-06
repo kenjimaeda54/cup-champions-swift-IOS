@@ -1,6 +1,5 @@
 # Cup champions
-Aplicativo para consultar os campeoes de cada copa do mundo
-
+Aplicativo para consultar os campeões de cada copa do mundo
 
 ## Feature
 - Reforcei o uso  do table view
